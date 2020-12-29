@@ -6,11 +6,7 @@ install:
 		pip install --user -r requirements.txt
 
 test:
-	python -m pytest -vv --cov=myrepolib tests/*.py
-	python -m pytest --nbval notebook.ipynb
+	python -m pytest -vv test_hello.py
 
 
-lint:
-	pylint --disable=R,C myrepolib cli web
-
-all: install lint test
+all: install test
