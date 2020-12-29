@@ -2,6 +2,8 @@
 
 ![CI](https://github.com/magrathj/Azure-Devops-ML-WebApp/workflows/CI/badge.svg)
 
+![CodeQL](https://github.com/magrathj/Azure-Devops-ML-WebApp/workflows/CodeQL/badge.svg)
+
 Machine learning web app with CI/CD component using the agile framework to build out the project.
 
 
