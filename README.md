@@ -12,8 +12,13 @@ Machine learning web app with CI/CD component using the agile framework to build
 
 
 
-![intro](./images/project_framework.PNG )
+![intro](./images/project_framework.PNG)
 
+
+![cloned repo in Azure Cloud Shell](./images/azure-cli-cloned-repo.PNG)
+
+
+![Pytest](./images/pytest_passing.PNG)
 
 
 ## Project Plan

@@ -10,4 +10,7 @@ lint:
 	pylint --disable=R,C,W1203 app.py
 
 
-all: install lint
+test:
+	python -m pytest -vv test_hello.py
+
+all: install lint test
