@@ -4,6 +4,8 @@
 
 ![CodeQL](https://github.com/magrathj/Azure-Devops-ML-WebApp/workflows/CodeQL/badge.svg)
 
+[![Build Status](https://dev.azure.com/magrathj/Azure-Flask-ML-App-Project/_apis/build/status/magrathj.Azure-Devops-ML-WebApp?branchName=main)](https://dev.azure.com/magrathj/Azure-Flask-ML-App-Project/_build/latest?definitionId=3&branchName=main)
+
 Machine learning web app with CI/CD component using the agile framework to build out the project.
 
 
