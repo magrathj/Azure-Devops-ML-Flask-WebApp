@@ -5,10 +5,6 @@ setup:
 install:
 	pip install --upgrade pip &&\
 		pip install --user -r requirements.txt
-	
-lint:
-	pylint --disable=R app.py
-
 
 test:
 	python -m pytest -vv test_hello.py
