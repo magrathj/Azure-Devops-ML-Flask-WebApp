@@ -12,7 +12,6 @@ Machine learning web app with CI/CD component using the agile framework to build
 
 
 
-![intro](./images/project_framework.PNG)
 
 
 ![cloned repo in Azure Cloud Shell](./images/azure-cli-cloned-repo.PNG)
@@ -22,29 +21,49 @@ Machine learning web app with CI/CD component using the agile framework to build
 
 
 ## Project Plan
-<TODO: Project Plan
 
-* A link to a Trello board for the project
+![A link to a Trello board for the project](https://github.com/magrathj/Azure-Devops-ML-WebApp/projects/1)
+
 * A link to a spreadsheet that includes the original and final project plan>
 
 ## Instructions
 
-<TODO:  
-* Architectural Diagram (Shows how key parts of the system work)>
+  
+***Architectural Diagram***
 
-<TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
+![intro](./images/project_framework.PNG)
 
-* Project running on Azure App Service
 
-* Project cloned into Azure Cloud Shell
+***Instructions for running the Python project locally***
+
+``` bash 
+git clone https://github.com/magrathj/Azure-Devops-ML-WebApp.git
+```
+
+``` bash 
+    python3 -m venv ~/.flask-ml-azure
+    source ~/.flask-ml-azure/bin/activate
+```
+
+``` bash 
+    make all
+```
+
+***Instructions for running the Project on Azure App Service***
+
+***Project cloned into Azure Cloud Shell***
+
 
 * Passing tests that are displayed after running the `make all` command from the `Makefile`
 
 * Output of a test run
 
+
 * Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
 
+
 * Running Azure App Service from Azure Pipelines automatic deployment
+
 
 * Successful prediction from deployed flask app in Azure Cloud Shell.  [Use this file as a template for the deployed prediction](https://github.com/udacity/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C2-AgileDevelopmentwithAzure/project/starter_files/flask-sklearn/make_predict_azure_app.sh).
 The output should look similar to this:
