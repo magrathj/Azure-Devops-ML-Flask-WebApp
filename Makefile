@@ -7,7 +7,7 @@ install:
 		pip install --user -r requirements.txt
 	
 lint:
-	pylint --disable=R,C,W1203 app.py
+	pylint --disable=R app.py
 
 
 test:
