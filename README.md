@@ -12,6 +12,8 @@ Current Status (badge)
 This repo contains a machine learning flask web app, with CI/CD component, built out using the agile framework. It has two build components, a github actions and azure pipelines build, to act as gates for deployment and to promote code to different environments. 
 
 
+![Machine Learning Web App](https://azure-flask-ml-app.azurewebsites.net/)
+
 ## Project Plan
 
 ![A link to a Trello board for the project](https://github.com/magrathj/Azure-Devops-ML-WebApp/projects/1)
