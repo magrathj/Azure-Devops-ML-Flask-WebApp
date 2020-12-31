@@ -7,17 +7,9 @@ Current Status (badge)
 
 ![CodeQL](https://github.com/magrathj/Azure-Devops-ML-WebApp/workflows/CodeQL/badge.svg)
 
+## Introduction
 
-Machine learning web app with CI/CD component using the agile framework to build out the project.
-
-
-
-
-
-![cloned repo in Azure Cloud Shell](./images/azure-cli-cloned-repo.PNG)
-
-
-![Pytest](./images/pytest_passing.PNG)
+This repo contains a machine learning flask web app, with CI/CD component, built out using the agile framework. It has two build components, a github actions and azure pipelines build, to act as gates for deployment and to promote code to different environments. 
 
 
 ## Project Plan
@@ -34,65 +26,10 @@ Machine learning web app with CI/CD component using the agile framework to build
 ![intro](./images/project_framework.PNG)
 
 
-***Instructions for running the Python project locally***
-
-``` bash 
-git clone https://github.com/magrathj/Azure-Devops-ML-WebApp.git
-```
-
-``` bash 
-    python3 -m venv ~/.flask-ml-azure
-    source ~/.flask-ml-azure/bin/activate
-```
-
-``` bash 
-    make all
-```
-
-***Instructions for running the Project on Azure App Service***
-
-***Project cloned into Azure Cloud Shell***
-
-
-* Passing tests that are displayed after running the `make all` command from the `Makefile`
-
-* Output of a test run
-
-
-* Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
-
-
-* Running Azure App Service from Azure Pipelines automatic deployment
-
-
-* Successful prediction from deployed flask app in Azure Cloud Shell.  [Use this file as a template for the deployed prediction](https://github.com/udacity/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C2-AgileDevelopmentwithAzure/project/starter_files/flask-sklearn/make_predict_azure_app.sh).
-The output should look similar to this:
-
-```bash
-udacity@Azure:~$ ./make_predict_azure_app.sh
-Port: 443
-{"prediction":[20.35373177134412]}
-```
-
-* Output of streamed log files from deployed application
-
-> 
-
-## Enhancements
-
-<TODO: A short description of how to improve the project in the future>
-
-## Demo 
-
-<TODO: Add link Screencast on YouTube>
-
-
-# additional
-
 # flask-ml-azure-serverless
 Deploy Flask Machine Learning Application on Azure App Services
 
-![continuous-delivery](https://user-images.githubusercontent.com/58792/85061538-f7352780-b174-11ea-8001-b0561c5bad73.jpg)
+![intro](./images/project_framework.PNG)
 
 ## To run it locally follow these steps
 
@@ -103,7 +40,10 @@ python3 -m venv ~/.flask-ml-azure
 source ~/.flask-ml-azure/bin/activate
 ```
 
-2.  Run `make install`
+2.  Run `make install` and Run `make test`
+
+
+![Pytest](./images/pytest_passing.PNG)
 
 3.  Run `python app.py`
 
@@ -115,21 +55,27 @@ source ~/.flask-ml-azure/bin/activate
 
 2. Launch Azure Shell  
 
-![1-launch-azure-shell](https://user-images.githubusercontent.com/58792/89555246-cc169e00-d7dd-11ea-8164-88caa1b8beba.png)
+
+![cloned repo in Azure Cloud Shell](./images/azure-cli-cloned-repo.PNG)
+
 
 3.  Create Github Repo with Azure Pipelines Enabled (Could be a fork of this repo)
 
-![2-create-Github-Repo](https://user-images.githubusercontent.com/58792/89555912-a3db6f00-d7de-11ea-9d2f-5ac030b43ec9.png)
+![2-create-Github-Repo](./images/create-github-repo.PNG)
 
 4. Clone the repo into Azure Cloud Shell
 
-*Note:  You make need to follow this YouTube video guide on how to [setup SSH keys and configure cloudshell environment](https://www.youtube.com/watch?v=3vtBAfPjQus)*
+
+``` bash 
+    git clone https://github.com/magrathj/Azure-Devops-ML-WebApp.git
+```
+
 
 5.  Create virtual environment and source
 
 ```bash
-python3 -m venv ~/.flask-ml-azure
-source ~/.flask-ml-azure/bin/activate
+    python3 -m venv ~/.flask-ml-azure
+    source ~/.flask-ml-azure/bin/activate
 ```
 
 2.  Run `make install`
@@ -138,28 +84,28 @@ source ~/.flask-ml-azure/bin/activate
 
 `az webapp up -n <your-appservice>`
 
-![3-flask-ml-service](https://user-images.githubusercontent.com/58792/89557009-2e709e00-d7e0-11ea-9b31-9090c8067a10.png)
+![3-flask-ml-service](./images/az-build-web-app.PNG)
 
 4. Verify deployed application works by browsing to deployed url: `https://<your-appservice>.azurewebsites.net/`
 
 You will see this output:
 
-![4-deployed-app](https://user-images.githubusercontent.com/58792/89557343-a8088c00-d7e0-11ea-891c-4d88333b8097.png)
+![4-deployed-app](./images/az-app-up-and-running.PNG)
 
 5.  Verify Machine Learning predictions work
 
 Change the line in `make_predict_azure_app.sh` to match the deployed prediction
 `-X POST https://<yourappname>.azurewebsites.net:$PORT/predict `
 
-![5-successful-prediction](https://user-images.githubusercontent.com/58792/89557573-02a1e800-d7e1-11ea-8318-1c628e13dae7.png)
+![5-successful-prediction](./images/az-make-predictions.PNG)
 
 6. [Create an Azure DevOps project and connect to Azure, (as official documentation describes)](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops)
 
-![6-devops](https://user-images.githubusercontent.com/58792/89558313-097d2a80-d7e2-11ea-8b65-df052b300331.png)
+![6-devops](./images/azure-devops-create-new-project.PNG)
 
 7.  Connect to Azure Resource Manager
 
-![7-service-connection](https://user-images.githubusercontent.com/58792/89558869-d0918580-d7e2-11ea-8ffe-52cfaf95fe16.png)
+![7-service-connection](./images/azure-devops-create-service-connection.PNG)
 
 8.  Configure connection to previously deployed resource group
 
