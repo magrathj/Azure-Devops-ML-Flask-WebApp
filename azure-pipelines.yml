@@ -43,9 +43,18 @@ stages:
         source antenv/bin/activate
         python -m pip install --upgrade pip
         pip install setup
-        pip install -r requirements.txt
+      workingDirectory: $(projectRoot)
+      displayName: "Python env setup"
+
+    - script: |
+        make install
       workingDirectory: $(projectRoot)
       displayName: "Install requirements"
+    
+    - script: |        
+        make lint
+      workingDirectory: $(projectRoot)
+      displayName: 'Run lint tests'
 
     - task: ArchiveFiles@2
       displayName: 'Archive files'
