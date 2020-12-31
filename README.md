@@ -18,11 +18,15 @@ This repo contains a machine learning flask web app, with CI/CD component, built
 
 ***Table timeline for project***
 
-| Tables   |      Are      |  Cool |
+| Week   |      Front end      |  Back end |
 |----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
+| 28/12/2020 |  Add flask app code | Create project skeleton |
+| 28/12/2020 |  Add hello world home page   |   Create github action |
+| 28/12/2020 |  Add button to invoke API |  Add sklearn model request call   |
+| 28/12/2020 |  Add a return page to display API response |  Convert github action to azure pipeline    |
+| 28/12/2020 |  Add UI tests |    Add test for APIs |
+| 28/12/2020 |  QA for UI |    QA for APIs |
+| 28/12/2020 |  Demo UI functionality |    Demo API calls |
 
 ## Instructions
 
