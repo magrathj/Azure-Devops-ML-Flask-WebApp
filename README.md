@@ -20,12 +20,6 @@ This repo contains a machine learning flask web app, with CI/CD component, built
 
 ## Instructions
 
-  
-***Architectural Diagram***
-
-![intro](./images/project_framework.PNG)
-
-
 # flask-ml-azure-serverless
 Deploy Flask Machine Learning Application on Azure App Services
 
