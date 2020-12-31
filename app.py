@@ -22,7 +22,6 @@ def scale(payload):
 def home():
     return(render_template('./main.html'))
 
-# TO DO:  Log out the prediction value
 @app.route("/predict", methods=['POST'])
 def predict():
     """Performs an sklearn prediction
@@ -62,6 +61,32 @@ def predict():
     json_payload = request.json
     LOG.info("JSON payload: %s json_payload")
     inference_payload = pd.DataFrame(json_payload)
+    LOG.info("inference payload DataFrame: %s inference_payload")
+    scaled_payload = scale(inference_payload)
+    prediction = list(clf.predict(scaled_payload))
+    return jsonify({'prediction': prediction})
+
+@app.route("/predict_form", methods=['POST'])
+def predict_form():
+    """
+
+    """
+    try:
+        clf = joblib.load("boston_housing_prediction.joblib")
+    except:
+        LOG.info("JSON payload: %s json_payload")
+        return "Model not loaded"
+        
+    LOG.info("JSON payload: %s json_payload")
+    chas    = request.form['CHAS']
+    rm      = request.form['RM']
+    tax     = request.form['TAX'] 
+    ptatio  = request.form['PTRATIO']
+    b       = request.form['B']
+    lstat   = request.form['LSTAT']        
+    inference_payload = pd.DataFrame([[chas, rm, tax, ptatio, b, lstat]],
+                                    columns=['chas', 'rm', 'tax', 'ptatio', 'b', 'lstat'],
+                                    dtype=float)
     LOG.info("inference payload DataFrame: %s inference_payload")
     scaled_payload = scale(inference_payload)
     prediction = list(clf.predict(scaled_payload))
