@@ -21,12 +21,14 @@ This repo contains a machine learning flask web app, with CI/CD component, built
 | Week   |      Front end      |  Back end |
 |----------|:-------------:|------:|
 | 28/12/2020 |  Add flask app code | Create project skeleton |
-| 28/12/2020 |  Add hello world home page   |   Create github action |
-| 28/12/2020 |  Add button to invoke API |  Add sklearn model request call   |
-| 28/12/2020 |  Add a return page to display API response |  Convert github action to azure pipeline    |
-| 28/12/2020 |  Add UI tests |    Add test for APIs |
-| 28/12/2020 |  QA for UI |    QA for APIs |
-| 28/12/2020 |  Demo UI functionality |    Demo API calls |
+| 04/01/2021 |  Add hello world home page   |   Create github action |
+| 11/01/2021 |  Add button to invoke API |  Add sklearn model request call   |
+| 18/01/2021 |  Add a return page to display API response |  Convert github action to azure pipeline    |
+| 25/01/2021 |  Add UI tests |    Add test for APIs |
+| 01/02/2021 |  QA for UI |    QA for APIs |
+| 08/02/2021 |  Demo UI functionality |    Demo API calls |
+| 15/02/2021 |  Cosmetic changes to UI |    Technical tebt - clean up of repo |
+| 21/02/2021 |  End to End demo |    End to End demo |
 
 ## Instructions
 
