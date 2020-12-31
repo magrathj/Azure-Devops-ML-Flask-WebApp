@@ -51,9 +51,9 @@ stages:
       displayName: "Install requirements"
     
     - script: |        
-        make lint
+        make test
       workingDirectory: $(projectRoot)
-      displayName: 'Run lint tests'
+      displayName: 'Run tests'
 
     - task: ArchiveFiles@2
       displayName: 'Archive files'
