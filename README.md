@@ -16,7 +16,13 @@ This repo contains a machine learning flask web app, with CI/CD component, built
 
 ![A link to a Trello board for the project](https://github.com/magrathj/Azure-Devops-ML-WebApp/projects/1)
 
-* A link to a spreadsheet that includes the original and final project plan>
+***Table timeline for project***
+
+| Tables   |      Are      |  Cool |
+|----------|:-------------:|------:|
+| col 1 is |  left-aligned | $1600 |
+| col 2 is |    centered   |   $12 |
+| col 3 is | right-aligned |    $1 |
 
 ## Instructions
 
@@ -206,20 +212,6 @@ stages:
 10.  Verify Continuous Delivery of Azure Pipelines by changing `app.py`
 
 You can watch this [YouTube Walkthrough of this process](https://www.youtube.com/watch?v=3KF9DltYvZU)
-
-11.  Add a lint step (this gates your code against syntax failure)
-
-```
-    - script: |
-        python -m venv antenv
-        source antenv/bin/activate
-        make install
-        make lint
-      workingDirectory: $(projectRoot)
-      displayName: 'Run lint tests'
-```
-
-You can watch this [YouTube Walkthrough of this process](https://www.youtube.com/watch?v=TItOatTfAOc)
 
 
 
