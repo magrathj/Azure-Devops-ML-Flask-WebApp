@@ -220,7 +220,7 @@ stages:
   ```
 10.  Verify Continuous Delivery of Azure Pipelines by changing `app.py`
 
-You can watch this [YouTube Walkthrough of this process](https://www.youtube.com/watch?v=3KF9DltYvZU)
+You can watch this [YouTube Walkthrough of this process](https://youtu.be/iD9_9JZt-J0)
 
 
 
