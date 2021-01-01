@@ -98,6 +98,7 @@ source ~/.flask-ml-azure/bin/activate
 
 You will see this output:
 
+
 ![4-deployed-app](./images/az-app-up-and-running-with-response.PNG)
 
 5.  Verify Machine Learning predictions work
