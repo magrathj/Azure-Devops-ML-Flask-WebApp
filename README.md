@@ -18,7 +18,8 @@ This repo contains a machine learning flask web app, with CI/CD component, built
 
 ![A link to a Trello board for the project](https://github.com/magrathj/Azure-Devops-ML-WebApp/projects/1)
 
-***Table timeline for project***
+
+### Table timeline for project (see excel as well - ProjectPlan.xlsx)
 
 | Week   |      Front end      |  Back end |
 |----------|:-------------:|------:|
@@ -31,6 +32,11 @@ This repo contains a machine learning flask web app, with CI/CD component, built
 | 08/02/2021 |  Demo UI functionality |    Demo API calls |
 | 15/02/2021 |  Cosmetic changes to UI |    Technical tebt - clean up of repo |
 | 21/02/2021 |  End to End demo |    End to End demo |
+
+
+## Future plan
+
+The next steps would be to develop out the APIs and Web UI. So that, there is a broad host of APIs with a swagger page. Similarly, for the UI building out the Web page so that its more extensive. Additionally, building out the testing to test the APIs using postman and selium. 
 
 ## Instructions
 
@@ -106,7 +112,7 @@ You will see this output:
 Change the line in `make_predict_azure_app.sh` to match the deployed prediction
 `-X POST https://<yourappname>.azurewebsites.net:$PORT/predict `
 
-![5-successful-prediction](./images/az-make-predictions.PNG)
+![5-successful-prediction](./images/az-make-predictions-azure-app.PNG)
 
 6. [Create an Azure DevOps project and connect to Azure, (as official documentation describes)](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops)
 
@@ -219,6 +225,9 @@ stages:
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
   ```
 10.  Verify Continuous Delivery of Azure Pipelines by changing `app.py`
+
+
+![successful build](./images/azure-pipelines-deployment.PNG)
 
 You can watch this [YouTube Walkthrough of this process](https://youtu.be/iD9_9JZt-J0)
 
