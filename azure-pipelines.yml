@@ -54,6 +54,11 @@ stages:
         make test
       workingDirectory: $(projectRoot)
       displayName: 'Run tests'
+    
+    - script: |        
+        make lint
+      workingDirectory: $(projectRoot)
+      displayName: 'Run lint'
 
     - task: ArchiveFiles@2
       displayName: 'Archive files'
