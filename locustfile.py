@@ -1,11 +1,37 @@
-from locust import HttpLocust,HttpUser, TaskSet, between
+from locust import HttpUser, TaskSet, task, between
 
-def index(l):
-    l.client.get("/")
 
-class UserBehavior(TaskSet):
-    tasks = {index: 1}
+class UserBBehavior(TaskSet):
+    def on_start(self):
+        self.warmup()
 
-class WebsiteUser(HttpUser):
-    task_set = UserBehavior
-    wait_time = between(5.0, 9.0)
+    def warmup(self):
+        self.client.get("/")
+
+    @task(1)
+    def volatile(self):
+        self.client.post("/predict", json={  
+                                            "CHAS":{  
+                                                "0":0
+                                            },
+                                            "RM":{  
+                                                "0":6.575
+                                            },
+                                            "TAX":{  
+                                                "0":296.0
+                                            },
+                                            "PTRATIO":{  
+                                                "0":15.3
+                                            },
+                                            "B":{  
+                                                "0":396.9
+                                            },
+                                            "LSTAT":{  
+                                                "0":4.98
+                                            }
+                                            })
+
+
+class AdminUser(HttpUser):
+    tasks = {UserBBehavior}
+    wait_time = between(5, 15)

@@ -232,4 +232,16 @@ stages:
 You can watch this [YouTube Walkthrough of this process](https://youtu.be/iD9_9JZt-J0)
 
 
+### Load testing with Locust 
+
+To Load test the App we've just hosted you can use the locust script
+
+``` bash 
+  ./run_locust.sh
+```
+
+![Locust](./images/locust-run-load-test-on-predict-api.PNG)
+
+
+
 
