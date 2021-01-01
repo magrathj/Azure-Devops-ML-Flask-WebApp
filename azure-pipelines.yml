@@ -54,11 +54,6 @@ stages:
         make test
       workingDirectory: $(projectRoot)
       displayName: 'Run tests'
-    
-    - script: |        
-        make lint
-      workingDirectory: $(projectRoot)
-      displayName: 'Run lint'
 
     - task: PublishTestResults@2
       condition: succeededOrFailed()
