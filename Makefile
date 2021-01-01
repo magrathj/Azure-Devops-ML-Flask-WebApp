@@ -7,9 +7,10 @@ install:
 		pip install --user -r requirements.txt
 
 lint:
-	pylint --disable=R app.py
+	python -m pip install flake8
+	flake8 .
 
 test:
-	python -m pytest -vv test_hello.py
+	python -m pytest -vv test_hello.py --doctest-modules --junitxml=junit/test-results.xml 
 
 all: install lint test
